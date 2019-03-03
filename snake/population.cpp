@@ -81,6 +81,9 @@ void Population::sort()
             if(m_listeJoueurs[i].m_score < m_listeJoueurs[i+intervalle].m_score){
                 iter_swap(m_listeJoueurs.begin()+i, m_listeJoueurs.begin()+i+intervalle);
                 changed = true;
+            }else if(m_listeJoueurs[i].m_score == m_listeJoueurs[i+intervalle].m_score and m_listeJoueurs[i].m_score_2 < m_listeJoueurs[i+intervalle].m_score_2){
+                iter_swap(m_listeJoueurs.begin()+i, m_listeJoueurs.begin()+i+intervalle);
+                changed = true;
             }
             i = i+1;
         }

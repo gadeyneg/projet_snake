@@ -13,6 +13,7 @@ public:
     void makePlay();
 
     int m_score;
+    int m_score_2; //on classe par score, puis par longueur.
     Reseau m_reseau;
     bool m_alive;
     Controller m_controller;

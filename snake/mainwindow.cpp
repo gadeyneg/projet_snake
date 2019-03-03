@@ -79,8 +79,8 @@ void MainWindow::launchAI(){
     ui->pushButton_2->hide();
     ui->pushButton_3->hide();
     ui->label_3->show();
-    int pop_size = 1000;
-    int gen_size = 20;
+    int pop_size = 3000;
+    int gen_size = 30;
     ui->progressBar->show();
     ui->progressBar->setRange(0,gen_size);
     ui->progressBar->setValue(0);

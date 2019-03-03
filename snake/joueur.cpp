@@ -11,11 +11,12 @@ Joueur::Joueur()
     //fin
     std::vector<int> topologie;
     topologie.push_back(20);
+
     topologie.push_back(4); //la topologie doit se finir par le nombre d'output.
     m_reseau = Reseau(topologie, 2); //l'entier désigne la fonction d'activation utilisée
 }
 
-Joueur generate_joueur(const Joueur &a, const Joueur &b)
+Joueur generate_joueur2(const Joueur &a, const Joueur &b)
 {
     Joueur res = a;
     //pour chaque couche du reseau
@@ -32,10 +33,12 @@ Joueur generate_joueur(const Joueur &a, const Joueur &b)
             }
         }
     }
+    res.m_score = 0;
+    res.m_score_2 = 0;
     return res;
 }
 
-Joueur generate_joueur2(const Joueur &a, const Joueur &b)
+Joueur generate_joueur(const Joueur &a, const Joueur &b)
 {
     Joueur res = a;
     //pour chaque couche du reseau
@@ -61,7 +64,7 @@ void Joueur::makePlay(){
         m_controller.nextMove(m_reseau);
         i++;
     }
-    m_score += int(m_controller.m_snake.corps.size());
-
+    m_score = int(m_controller.m_snake.corps.size());
+    m_score_2 = i;
 }
 

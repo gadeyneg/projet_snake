@@ -1,7 +1,7 @@
 #include "reseau.h"
 #include <iostream>
 #include <tgmath.h>
-#define INPUT_SIZE 9 //8 sans biai
+#define INPUT_SIZE 7 //9 avec 4 valeurs tete/cible //8 sans biai
 
 
 Reseau::Reseau()
